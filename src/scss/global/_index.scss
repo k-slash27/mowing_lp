@@ -1,0 +1,50 @@
+@use "sass:map";
+
+// breakpoint
+// ------------------------------
+$breakpoints: (
+    "xs": 350px,
+    "sm": 500px,
+    "md": 768px,
+    "lg": 1080px,
+    "xl": 1200px,
+);
+
+@mixin min-mq($breakpoint: md) {
+    @media screen and (min-width: #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+    }
+}
+
+@mixin max-mq($breakpoint: md) {
+    @media screen and (max-width: #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+    }
+}
+
+
+// color
+// ------------------------------
+$color-font: #1E1E1E;
+$color-font-light: #999999;
+$color-primary: #26C836;
+$color-bg: #fff;
+$color-bg-primary-light: #F4FFF5;
+$color-link: #4895e6;
+
+
+/*!
+global > content-width
+------------------------------
+*/
+:root {
+    --width-content-s: 760px;
+    --width-content: 1080px;
+}
+
+// font
+// ------------------------------
+$font-family-base: "Noto Sans JP", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+
+
+

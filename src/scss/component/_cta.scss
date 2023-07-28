@@ -1,0 +1,132 @@
+@use "../global" as g;
+
+/*!
+component > CTA
+------------------------------
+*/
+.cta {
+    background-color: g.$color-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 96px 0;
+
+    @include g.max-mq("sm") {
+        padding: 30px 15px;
+        margin: 35px 0;
+    }
+
+    &__catch {
+        color: #FFF;
+        text-align: center;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.5; /* 150% */
+        letter-spacing: 2.88px;
+
+        @include g.max-mq("sm") {
+            font-size: 23px;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+    }
+
+    &__btn__area {
+        display: flex;
+        width: 100%;
+        margin-top: 86px;
+        justify-content: center;
+
+        @include g.max-mq("md") {
+            flex-direction: column-reverse;
+            align-items: center;
+            margin-top: 73px;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        max-width: 442px;
+        height: 90px;
+        border-radius: 16px;
+        border: 4px solid #000;
+        background: #FFF;
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: 2.2px;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+
+        @include g.max-mq("sm") {
+            height: 60px;
+            font-size: 22px;
+        }
+
+        &.--solid {
+            background: #000;
+            color: #FFF;
+            position: relative;
+        }
+
+        & + &  {
+            margin-left: 17px;
+
+            @include g.max-mq("md") {
+                margin-left: 0;
+                margin-bottom: 15px;
+            }
+        }
+
+        &__baloon {
+            position: absolute;
+            display: flex;
+            top: -53px;
+            // left: calc(50% + 17px);
+            left: 50%;
+            width: 100%;
+            color: g.$color-font;
+            font-size: 30px;
+            line-height: 1;
+            z-index: 1;
+            align-items: center;
+            letter-spacing: 0.9px;
+            transform: translateX(-50%);
+            justify-content: space-between;
+
+            @include g.max-mq("sm") {
+                font-size: 20px;
+                justify-content: center;
+                top: -40px;
+            }
+
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 50px;
+                height: 1px;
+                background-color: g.$color-font;
+                transform: rotate(45deg);
+
+                @include g.max-mq("sm") {
+                    width: 30px;
+                    margin-right: 5px;
+                }
+            }
+
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 50px;
+                height: 1px;
+                background-color: g.$color-font;
+                transform: rotate(-45deg);
+
+                @include g.max-mq("sm") {
+                    width: 30px;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
