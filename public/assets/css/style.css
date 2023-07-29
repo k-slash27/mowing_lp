@@ -710,13 +710,13 @@ div.eyecatch video#bgvid {
   background-size: cover;
   object-fit: cover;
   background-position-x: right;
-  object-position: right;
+  object-position: 65%;
 }
 div.eyecatch .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.45);
   top: 0;
   left: 0;
 }
@@ -726,7 +726,6 @@ div.eyecatch .overlay__pattern {
   background-size: cover;
   height: auto;
   aspect-ratio: 323.994/407.92;
-  opacity: 0.3;
 }
 div.eyecatch .overlay__pattern.--one {
   width: 230px;
@@ -1228,5 +1227,3 @@ div.eyecatch .title__catch {
   line-height: 1.51; /* 151.111% */
   letter-spacing: 0.8px;
 }
-
-/*# sourceMappingURL=style.css.map */
