@@ -483,8 +483,13 @@ div.eyecatch {
                 letter-spacing: 0.7px;
                 position: relative;
                 cursor: pointer;
-                text-indent: -1.25rem;
-                margin-left: 1.25rem;
+                text-indent: -1.5rem;
+                margin-left: 1.5rem;
+
+                @include g.max-mq("sm") {
+                    text-indent: -1.3rem;
+                    margin-left: 1.3rem;
+                }
 
                 &::before {
                     content: "Q. ";
