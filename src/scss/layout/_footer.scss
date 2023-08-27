@@ -59,9 +59,20 @@ layout > footer
 
         .contacts {
             .company {
-                font-size: 16px;
                 font-weight: 800;
                 letter-spacing: 0.96px;
+                font-size: 15px;
+
+                .name {
+                    font-size: 17px;
+                    font-family: "Inter";
+
+                    strong {
+                        font-weight: 800;
+                        font-size: 19px;
+                        letter-spacing: 3px;
+                    }
+                }
             }
 
             @include g.max-mq("sm") {

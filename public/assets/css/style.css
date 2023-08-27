@@ -589,8 +589,8 @@ layout > footer
   opacity: 0.7;
 }
 .footer__logo {
-  width: 109px;
-  margin-right: 15px;
+  width: 90px;
+  margin-right: 20px;
 }
 .footer__info {
   display: -webkit-box;
@@ -614,10 +614,18 @@ layout > footer
   }
 }
 .footer__info .contacts .company {
-  font-family: "Inter";
-  font-size: 16px;
   font-weight: 800;
   letter-spacing: 0.96px;
+  font-size: 15px;
+}
+.footer__info .contacts .company .name {
+  font-size: 17px;
+  font-family: "Inter";
+}
+.footer__info .contacts .company .name strong {
+  font-weight: 800;
+  font-size: 19px;
+  letter-spacing: 3px;
 }
 @media screen and (max-width: 500px) {
   .footer__info .contacts {
